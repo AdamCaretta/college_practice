@@ -23,3 +23,22 @@ if __name__ == "__main__":
         print("Inside the context")
         raise IndexError("My nasty bug")
     print("Outside the context")
+
+#example
+class ManagedFile:
+    def __init__(self, filename, mode):
+        self.filename = filename
+        self.mode = mode
+
+    def __enter__(self):
+        self.file = open(self.filename, self.mode)
+        return self.file
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if self.file:
+            self.file.close()
+
+# Usage:
+with ManagedFile('hello.txt', 'w') as f:
+    f.write('Hello, world!')
+    f.write('Python context manager is great!')
