@@ -15,7 +15,7 @@ class InputWindow:
         # root = tk.Tk()
         # root.title("Event Listener Example")
         # root.bind("<Return>", show_hello)
-        
+
         self.container = ttk.Frame(root)
 
         first_label = ttk.Label(self.container, text="First Name:")
