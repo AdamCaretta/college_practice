@@ -1,4 +1,4 @@
-import requests
+'''import requests
 import json
 
 # x = requests.get('https://swapi.dev/api/starships/')
@@ -14,3 +14,4 @@ x = requests.get(
 print(x.url)
 print(x.status_code)
 print(json.dumps(x.json(), indent=4, sort_keys=True))
+'''
